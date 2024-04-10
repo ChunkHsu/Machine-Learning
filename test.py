@@ -131,7 +131,7 @@ def show_dim3(data, labels):
 
 
 # 打开的文件名
-filename = "/home/PJLAB/xuzhuangzhuang/Works/Projects/skl/Machine-Learning/实验三/datingTestSet.txt"
+filename = "datingTestSet.txt"
 # 打开并处理数据
 datas, labels = fileMatrix(filename)
 # 二维图表图像

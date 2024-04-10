@@ -22,17 +22,17 @@ def fileMatrix(filename):
         #将数据前三列提取出来,存放到returnMat的NumPy矩阵中,也就是特征矩阵
         returnMat[index,:] = listFromLine[0:3]
         #根据文本中标记的喜欢程度进行分类,1代表不喜欢,2代表魅力一般,3代表极具魅力
-        if listFromLine[-1] == '1':
+        if listFromLine[-1] == 'didntLike':
             classLabelVector.append(1)
-        elif listFromLine[-1] == '2':
+        elif listFromLine[-1] == 'smallDoses':
             classLabelVector.append(2)
-        elif listFromLine[-1] == '3':
+        elif listFromLine[-1] == 'largeDoses':
             classLabelVector.append(3)
         index += 1
     return returnMat, classLabelVector
 if __name__ == '__main__':
     #打开的文件名
-    filename = "datingTestSet2.txt"
+    filename = "实验三/Lab3/Lab3/KNN/练习2-海伦约会/datingTestSet.txt"
     #打开并处理数据
     datingDataMat, datingLabels = fileMatrix(filename)
     print(datingDataMat)
